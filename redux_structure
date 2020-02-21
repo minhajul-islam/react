@@ -1,9 +1,42 @@
 ### App structure
-> src
->> assets - image,font,json,string 
->> components - ex: common,about,...
->> screen - ex: about,
->> store - actions,reducers,configStore
->> App.js
->> Root.js
->> index.js->Root->App
+src
+   assets
+         image
+         font
+         json
+         string
+   components
+         common
+         about
+         contact
+         home
+   screen
+         about
+         contact
+         home
+   store 
+        actions
+        reducers
+        configStore
+        
+App.js
+Root.js
+index.js->Root->App
+
+
+### Redux structure
+store 
+     actions: get data from api and then  command to save reducers
+        home.js -> setNameToState('mahfuz')
+        history.js -> getHistory('02/11/2019')->list, setHistory(list)
+        index.js -> Action name as constat
+     reducers: it save data to state
+        home.js -> name:mahfuz
+        history.js -> history:historyList
+        index.js -> combine all reducers
+     
+     configStore: create store where all reducers(index-combineReducers) exist
+
+
+
+
